@@ -1,0 +1,25 @@
+
+QFrame {
+    background: #FFFFFF;
+    /*border-image: url('resource/loginBackground.jpg');*/
+}
+
+QPushButton#enterButton {
+    border: 1px;
+    border-radius: 3px;
+    background: #FF0000;
+    color: white;
+}
+
+QPushButton#enterButton:hover {
+    background: #4A94D9;
+}
+
+QLabel#warningIconLabel {
+    border-image: url(resource/warning.png);
+}
+
+QLabel#warningLabel {
+    color: #E33232;
+    padding: 3px;
+}

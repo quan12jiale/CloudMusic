@@ -1,0 +1,85 @@
+/*QFrame {*/
+    /*border: none;*/
+/*}*/
+
+QFrame#currentMusic {
+    background: #191B1F;
+    border: none;
+    border-right: 1px solid #23262C;
+    border-top: 1px solid #23262C;
+}
+
+QFrame#short {
+    background: #191B1F;
+    border: none;
+    border-right: 1px solid #23262C;
+    border-top: 1px solid #23262C;
+}
+
+QFrame#frame {
+    background: #191B1F;
+    border: none;
+    /*border-right: 1px solid #23262C;*/
+    /*border-top: 1px solid #23262C;*/
+    border-bottom: 1px solid #23262C;
+}
+
+QFrame#lyricFrame {
+    background-color: rgba(25, 27, 31, 100%);
+}
+
+QScrollArea {
+    background-color: rgba(25, 27, 31, 100%);
+    border: none;
+
+    /*border-right: 1px solid #23262C;*/
+    /*border-top: 1px solid #23262C;*/
+}
+
+
+QPushButton {
+    border: none;
+}
+
+QPushButton#recoveryButton {
+    background-image: url(resource/recovery.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(38, 41, 45, 50%);
+    padding: 5px;
+    border-radius: 1px;
+}
+
+QPushButton#recoveryButton:hover {
+    /*border-image: url(resource/recovery.png);*/
+    background-color: rgba(38, 41, 45, 77%);
+}
+
+QLabel {
+    color: white;
+    font: bold;
+}
+
+QLabel#titleLabel {
+    color: #D5D5D6;
+    font-size: 18px;
+}
+
+QLabel#lyric {
+    color:  #67686A;
+    font-size: 15px;
+    border: none;
+    margin-right: : 100px;
+    font: bold;
+}
+
+QTextEdit {
+    /*background-image: url(resource/lyric.jpg);*/
+    background-color: rgba(0, 0, 0, 0%);
+    border: none;
+    margin-right: : 100px;
+    color: #67686A;
+    font: bold;
+    font-size: 15px;
+    text-align: center;
+}
