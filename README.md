@@ -14,9 +14,9 @@
 * 方便的界面皮肤更换。
 
 ## 截图:
-<img src="https://github.com/quan12jiale/CloudMusic/blob/master/resource/screenred.png" alt="CloudMusic红色主题" />
+<img src="https://github.com/quan12jiale/CloudMusic/blob/master/images/resource/screenred.png" alt="CloudMusic红色主题" />
 
-<img src="https://github.com/quan12jiale/CloudMusic/blob/master/resource/screenlyric.png" alt="CloudMusic歌词截图" />
+<img src="https://github.com/quan12jiale/CloudMusic/blob/master/images/resource/screenlyric.png" alt="CloudMusic歌词截图" />
 
 ### 安装:
 ```
