@@ -1,6 +1,6 @@
 # CloudMusic
 
-## 仿网易云的音乐播放器~， ( • ̀ω•́ )✧~。代码参考了这位大佬： <a href="https://github.com/HuberTRoy/MusicBox">MuiscBox</a> 
+## 仿网易云的音乐播放器， ( • ̀ω•́ )✧~。代码参考了这位大佬： <a href="https://github.com/HuberTRoy/MusicBox">MuiscBox</a> 
 
 ### 功能:
 * 支持网易云音乐的歌单/搜索，播放音乐，查看音乐信息(歌词)。
