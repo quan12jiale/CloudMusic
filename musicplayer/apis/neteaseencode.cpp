@@ -1,4 +1,5 @@
 ﻿#include "neteaseencode.h"
+#include <QCoreApplication>
 
 QString createSecretKey(int size)
 {
@@ -29,8 +30,15 @@ QHash<QString,QString> encrypted_request(const QHash<QString, QString> &dict)
     text.append('}');
     //qDebug() << text;
 
+    QStringList arguments;
+    QString pyfile_path;
+#ifdef _MSC_VER
+    pyfile_path = QCoreApplication::applicationDirPath() + "/";
+#endif // MSVC
+    pyfile_path += "temp.py";//注意不要修改或删除temp.py
+    arguments << pyfile_path << text;
+
     QProcess process;
-    QStringList arguments({"temp.py", text});//注意不要修改或删除temp.py
     process.start(python_executable, arguments);
     process.waitForFinished();
     QString res = process.readAllStandardOutput();
@@ -60,8 +68,15 @@ QHash<QString,QString> encrypted_request(const QList<long long> &ids)
     text.append("], \"br\": 999000}");
     //qDebug() << text;
 
+    QStringList arguments;
+    QString pyfile_path;
+#ifdef _MSC_VER
+    pyfile_path = QCoreApplication::applicationDirPath() + "/";
+#endif // MSVC
+    pyfile_path += "temp.py";//注意不要修改或删除temp.py
+    arguments << pyfile_path << text;
+
     QProcess process;
-    QStringList arguments({"temp.py", text});//注意不要修改或删除temp.py
     process.start(python_executable, arguments);
     process.waitForFinished();
     QString res = process.readAllStandardOutput();
@@ -83,15 +98,31 @@ QHash<QString,QString> encrypted_request(const QList<long long> &ids)
 
 QHash<QString,QString> encrypted_request2(const QHash<QString, QString> &dict)
 {
-    QFile file("temp2.txt");
+    QFile file;
+    QString filename;
+#ifdef _MSC_VER
+    filename = QCoreApplication::applicationDirPath() + "/";
+#endif // MSVC
+    filename += "temp2.txt";
+    file.setFileName(filename);
     if (file.open(QIODevice::WriteOnly)) {
         QTextStream out(&file);
         out << dict["s"];
         file.close();
     }
 
+    QStringList arguments;
+    QString pyfile_path;
+#ifdef _MSC_VER
+    pyfile_path = QCoreApplication::applicationDirPath() + "/";
+#endif // MSVC
+    pyfile_path += "temp2.py";//注意不要修改或删除temp2.py
+    arguments << pyfile_path;
+
     QProcess process;
-    QStringList arguments({"temp2.py"});//注意不要修改或删除temp2.py
+#ifdef _MSC_VER
+    process.setWorkingDirectory(QCoreApplication::applicationDirPath());
+#endif // MSVC
     process.start(python_executable, arguments);
     process.waitForFinished();
     QString res = process.readAllStandardOutput();
@@ -110,36 +141,3 @@ QHash<QString,QString> encrypted_request2(const QHash<QString, QString> &dict)
     return data;
 }
 
-
-QHash<QString,QString> encrypted_request3(const QHash<QString, QString> &dict)
-{
-    QFile file("temp3.txt");
-    if (file.open(QIODevice::WriteOnly)) {
-        QTextStream out(&file);
-        out << dict["s"];
-        //qDebug() << dict["s"];
-        file.close();
-    }
-
-    //QProcess process;
-    QStringList arguments({"temp3.py"});//注意不要修改或删除temp3.py
-    //process.start(python_executable, arguments);
-    //process.waitForFinished();
-    QProcess::execute("python", arguments);
-
-    QHash<QString,QString> data;
-    QString encText;
-    QString encSecKey;
-    if (file.open(QIODevice::ReadOnly)) {
-        QString encText = file.readLine();//多了\r\n
-        QString encSecKey = file.readLine();
-        //qDebug() << encText;
-        //qDebug() << encSecKey;
-
-        data["params"] = encText;
-        data["encSecKey"] = encSecKey;
-        file.close();
-    }
-
-    return data;
-}

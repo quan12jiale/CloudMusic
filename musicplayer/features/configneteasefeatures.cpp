@@ -122,7 +122,7 @@ void ConfigNetEase::threadSetSings()
         else {
             QByteArray json = network_Requests->httpRequest(url);
             if (json.isEmpty()) {
-                QMessageBox::warning(nullptr, "网络错误", "请检查网络连接后再试");
+                QMessageBox::warning(nullptr, tr("网络错误"), tr("请检查网络连接后再试"));
                 continue;
             }
             QPixmap pic;

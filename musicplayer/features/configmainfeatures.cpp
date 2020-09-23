@@ -257,7 +257,7 @@ void ConfigHeader::loadLoginInformations(QPair<QString, QString> informations)
 {
     QByteArray json = netease->login(informations.first, informations.second);
     if (json.isEmpty()) {
-        emit breakSignal("请检查网络后重试~.");
+        emit breakSignal(tr("请检查网络后重试~."));
         this->code = 500;
         return;
     }
@@ -329,7 +329,7 @@ void ConfigHeader::emitWarning(const QString& warningStr)
 void ConfigHeader::exitLogin()
 {
     this->loginInfor = QJsonObject();
-    this->header->loginButton->setText("未登录 ▼");
+    this->header->loginButton->setText(tr("未登录 ▼"));
     connect(this->header->loginButton, SIGNAL(clicked()),
             SLOT(showLoginBox()));
     this->header->userPix->setSrc("resource/nouser.png");
@@ -530,7 +530,7 @@ ConfigSearchArea::ConfigSearchArea(SearchArea* searchArea)
     : QObject ()
 {
     this->currentIndex = 0;
-    this->currentName = "网易云";
+    this->currentName = tr("网易云");
 
     this->searchArea = searchArea;
 
@@ -540,7 +540,7 @@ ConfigSearchArea::ConfigSearchArea(SearchArea* searchArea)
     this->searchResultTableIndexs = this->searchArea->neteaseSearchFrame->singsResultTable;
 
     this->musicList = QList<QHash<QString,QString>>();
-    this->noContents = "很抱歉 未能找到关于<font style='text-align: center;' color='#23518F'>“%1”</font>的%2。";
+    this->noContents = tr("很抱歉 未能找到关于<font style='text-align: center;' color='#23518F'>“%1”</font>的%2。");
 
     this->bindConnect();
     this->setContextMenu();
@@ -568,7 +568,7 @@ void ConfigSearchArea::bindConnect()
 
 void ConfigSearchArea::setContextMenu()
 {
-    actionDownloadSong = new QAction("下载", this);
+    actionDownloadSong = new QAction(tr("下载"), this);
     connect(actionDownloadSong, SIGNAL(triggered()), SLOT(downloadSong()));
 }
 
@@ -660,7 +660,7 @@ void ConfigSearchArea::setSingsData(const QList<QHash<QString, QString> > &data)
         return;
     if (data.size() == 0) {
         searchArea->noSingsContentsLabel->setText(
-                    this->noContents.arg(this->searchArea->text).arg("单曲"));
+                    this->noContents.arg(this->searchArea->text).arg(tr("单曲")));
         searchArea->singsResultTable->hide();
         searchArea->noSingsContentsLabel->show();
     }
@@ -760,10 +760,10 @@ void ConfigDetailSings::bindConnect()
 
 void ConfigDetailSings::setContextMenu()
 {
-    this->actionNextPlay = new QAction("下一首播放", this);
+    this->actionNextPlay = new QAction(tr("下一首播放"), this);
     connect(actionNextPlay, SIGNAL(triggered()), SLOT(addToNextPlay()));
 
-    this->actionDownloadSong = new QAction("下载", this);
+    this->actionDownloadSong = new QAction(tr("下载"), this);
     connect(actionDownloadSong, SIGNAL(triggered()), SLOT(downloadSong()));
 }
 
@@ -894,7 +894,7 @@ ConfigSystemTray::ConfigSystemTray(SystemTray* systemTray)
 
 void ConfigSystemTray::addActions()
 {
-    QAction* closeAction = new QAction("退出", this->systemTray);
+    QAction* closeAction = new QAction(tr("退出"), this->systemTray);
     connect(closeAction, SIGNAL(triggered()),
             this->systemTray->parent, SLOT(close()));
     this->systemTray->addAction(closeAction);

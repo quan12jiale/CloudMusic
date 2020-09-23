@@ -2,41 +2,146 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>ConfigDetailSings</name>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="763"/>
+        <source>下一首播放</source>
+        <translation>下一首播放</translation>
+    </message>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="766"/>
+        <source>下载</source>
+        <translation>下载</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigDownloadFrame</name>
+    <message>
+        <location filename="features/configdownloadframefeatures.cpp" line="79"/>
+        <source> 加入下载队列</source>
+        <translation> 加入下载队列</translation>
+    </message>
+    <message>
+        <location filename="features/configdownloadframefeatures.cpp" line="89"/>
+        <source> 保存失败</source>
+        <translation> 保存失败</translation>
+    </message>
+    <message>
+        <location filename="features/configdownloadframefeatures.cpp" line="91"/>
+        <source> 下载完成</source>
+        <translation> 下载完成</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigHeader</name>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="260"/>
+        <source>请检查网络后重试~.</source>
+        <translation>请检查网络后重试~.</translation>
+    </message>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="332"/>
+        <source>未登录 ▼</source>
+        <translation>未登录 ▼</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigNetEase</name>
+    <message>
+        <location filename="features/configneteasefeatures.cpp" line="125"/>
+        <source>网络错误</source>
+        <translation>网络错误</translation>
+    </message>
+    <message>
+        <location filename="features/configneteasefeatures.cpp" line="125"/>
+        <source>请检查网络连接后再试</source>
+        <translation>请检查网络连接后再试</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigSearchArea</name>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="533"/>
+        <source>网易云</source>
+        <translation>网易云</translation>
+    </message>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="543"/>
+        <source>很抱歉 未能找到关于&lt;font style=&apos;text-align: center;&apos; color=&apos;#23518F&apos;&gt;“%1”&lt;/font&gt;的%2。</source>
+        <translation>很抱歉 未能找到关于&lt;font style=&apos;text-align: center;&apos; color=&apos;#23518F&apos;&gt;“%1”&lt;/font&gt;的%2。</translation>
+    </message>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="571"/>
+        <source>下载</source>
+        <translation>下载</translation>
+    </message>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="663"/>
+        <source>单曲</source>
+        <translation>单曲</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigSystemTray</name>
+    <message>
+        <location filename="features/configmainfeatures.cpp" line="897"/>
+        <source>退出</source>
+        <translation>退出</translation>
+    </message>
+</context>
+<context>
+    <name>CurrentMusic</name>
+    <message>
+        <location filename="widgets/player.cpp" line="685"/>
+        <location filename="widgets/player.cpp" line="700"/>
+        <source>✧请慢慢欣赏~</source>
+        <translation>✧请慢慢欣赏~</translation>
+    </message>
+</context>
+<context>
+    <name>CurrentMusicDetail</name>
+    <message>
+        <location filename="widgets/player.cpp" line="852"/>
+        <source>✧✧✧</source>
+        <translation>✧✧✧</translation>
+    </message>
+</context>
+<context>
     <name>DetailSings</name>
     <message>
         <location filename="widgets/singsframebase.cpp" line="109"/>
         <source>歌单</source>
-        <translation></translation>
+        <translation>歌单</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="113"/>
         <source>简介</source>
-        <translation></translation>
+        <translation>简介</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="117"/>
         <source>全部播放</source>
-        <translation></translation>
+        <translation>全部播放</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="127"/>
         <source>音乐标题</source>
-        <translation></translation>
+        <translation>音乐标题</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="127"/>
         <source>歌手</source>
-        <translation></translation>
+        <translation>歌手</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="127"/>
         <source>时长</source>
-        <translation></translation>
+        <translation>时长</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="136"/>
         <source>歌曲列表</source>
-        <translation></translation>
+        <translation>歌曲列表</translation>
     </message>
 </context>
 <context>
@@ -44,27 +149,27 @@
     <message>
         <location filename="widgets/downloadframe.cpp" line="31"/>
         <source>当前存储目录: </source>
-        <translation></translation>
+        <translation>当前存储目录: </translation>
     </message>
     <message>
         <location filename="widgets/downloadframe.cpp" line="35"/>
         <source>选择目录</source>
-        <translation></translation>
+        <translation>选择目录</translation>
     </message>
     <message>
         <location filename="widgets/downloadframe.cpp" line="56"/>
         <source>音乐标题</source>
-        <translation></translation>
+        <translation>音乐标题</translation>
     </message>
     <message>
         <location filename="widgets/downloadframe.cpp" line="56"/>
         <source>歌手</source>
-        <translation></translation>
+        <translation>歌手</translation>
     </message>
     <message>
         <location filename="widgets/downloadframe.cpp" line="56"/>
         <source>时长</source>
-        <translation></translation>
+        <translation>时长</translation>
     </message>
 </context>
 <context>
@@ -110,7 +215,7 @@
     <message>
         <location filename="widgets/loginframes.cpp" line="65"/>
         <source>登陆</source>
-        <translation></translation>
+        <translation>登陆</translation>
     </message>
 </context>
 <context>
@@ -118,27 +223,27 @@
     <message>
         <location filename="widgets/native.cpp" line="26"/>
         <source>本地音乐</source>
-        <translation></translation>
+        <translation>本地音乐</translation>
     </message>
     <message>
         <location filename="widgets/native.cpp" line="34"/>
         <source>选择目录</source>
-        <translation></translation>
+        <translation>选择目录</translation>
     </message>
     <message>
         <location filename="widgets/native.cpp" line="53"/>
         <source>音乐标题</source>
-        <translation></translation>
+        <translation>音乐标题</translation>
     </message>
     <message>
         <location filename="widgets/native.cpp" line="53"/>
         <source>歌手</source>
-        <translation></translation>
+        <translation>歌手</translation>
     </message>
     <message>
         <location filename="widgets/native.cpp" line="53"/>
         <source>时长</source>
-        <translation></translation>
+        <translation>时长</translation>
     </message>
 </context>
 <context>
@@ -194,25 +299,70 @@
     <message>
         <location filename="widgets/loginframes.cpp" line="107"/>
         <source>扫码登录更安全</source>
-        <translation></translation>
+        <translation>扫码登录更安全</translation>
     </message>
     <message>
         <location filename="widgets/loginframes.cpp" line="115"/>
         <location filename="widgets/loginframes.cpp" line="135"/>
         <location filename="widgets/loginframes.cpp" line="174"/>
         <source>请输入用户名</source>
-        <translation></translation>
+        <translation>请输入用户名</translation>
     </message>
     <message>
         <location filename="widgets/loginframes.cpp" line="123"/>
         <location filename="widgets/loginframes.cpp" line="180"/>
         <source>请输入密码</source>
-        <translation></translation>
+        <translation>请输入密码</translation>
     </message>
     <message>
         <location filename="widgets/loginframes.cpp" line="146"/>
         <source>登 录</source>
-        <translation></translation>
+        <translation>登 录</translation>
+    </message>
+</context>
+<context>
+    <name>PlayWidgets</name>
+    <message>
+        <location filename="widgets/player.cpp" line="69"/>
+        <source>单曲循环</source>
+        <translation>单曲循环</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="75"/>
+        <source>列表循环</source>
+        <translation>列表循环</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="81"/>
+        <source>随机循环</source>
+        <translation>随机循环</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="86"/>
+        <location filename="widgets/player.cpp" line="312"/>
+        <source>打开歌词</source>
+        <translation>打开歌词</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="87"/>
+        <source>词</source>
+        <translation>词</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="92"/>
+        <source>打开播放列表</source>
+        <translation>打开播放列表</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="187"/>
+        <location filename="widgets/player.cpp" line="210"/>
+        <source>音乐不可播放</source>
+        <translation>音乐不可播放</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="318"/>
+        <source>关闭歌词</source>
+        <translation>关闭歌词</translation>
     </message>
 </context>
 <context>
@@ -220,22 +370,22 @@
     <message>
         <location filename="widgets/recommendframe.cpp" line="32"/>
         <source>你的专属推荐~❤</source>
-        <translation></translation>
+        <translation>你的专属推荐~❤</translation>
     </message>
     <message>
         <location filename="widgets/recommendframe.cpp" line="50"/>
         <source>音乐标题</source>
-        <translation></translation>
+        <translation>音乐标题</translation>
     </message>
     <message>
         <location filename="widgets/recommendframe.cpp" line="50"/>
         <source>歌手</source>
-        <translation></translation>
+        <translation>歌手</translation>
     </message>
     <message>
         <location filename="widgets/recommendframe.cpp" line="50"/>
         <source>时长</source>
-        <translation></translation>
+        <translation>时长</translation>
     </message>
 </context>
 <context>
@@ -251,17 +401,17 @@
     <message>
         <location filename="widgets/singsframebase.cpp" line="39"/>
         <source>音乐标题</source>
-        <translation></translation>
+        <translation>音乐标题</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="39"/>
         <source>歌手</source>
-        <translation></translation>
+        <translation>歌手</translation>
     </message>
     <message>
         <location filename="widgets/singsframebase.cpp" line="39"/>
         <source>时长</source>
-        <translation></translation>
+        <translation>时长</translation>
     </message>
 </context>
 <context>
@@ -269,32 +419,32 @@
     <message>
         <location filename="widgets/skinwidget.cpp" line="89"/>
         <source>酷炫黑</source>
-        <translation></translation>
+        <translation>酷炫黑</translation>
     </message>
     <message>
         <location filename="widgets/skinwidget.cpp" line="90"/>
         <source>官方红</source>
-        <translation></translation>
+        <translation>官方红</translation>
     </message>
     <message>
         <location filename="widgets/skinwidget.cpp" line="91"/>
         <source>可爱粉</source>
-        <translation></translation>
+        <translation>可爱粉</translation>
     </message>
     <message>
         <location filename="widgets/skinwidget.cpp" line="92"/>
         <source>天际蓝</source>
-        <translation></translation>
+        <translation>天际蓝</translation>
     </message>
     <message>
         <location filename="widgets/skinwidget.cpp" line="93"/>
         <source>清新绿</source>
-        <translation></translation>
+        <translation>清新绿</translation>
     </message>
     <message>
         <location filename="widgets/skinwidget.cpp" line="94"/>
         <source>土豪金</source>
-        <translation></translation>
+        <translation>土豪金</translation>
     </message>
 </context>
 <context>
@@ -306,11 +456,24 @@
     </message>
 </context>
 <context>
+    <name>_TableWidget</name>
+    <message>
+        <location filename="widgets/player.cpp" line="1146"/>
+        <source>清空</source>
+        <translation>清空</translation>
+    </message>
+    <message>
+        <location filename="widgets/player.cpp" line="1149"/>
+        <source>从列表中删除</source>
+        <translation>从列表中删除</translation>
+    </message>
+</context>
+<context>
     <name>loginFrames::Header</name>
     <message>
         <location filename="widgets/loginframes.cpp" line="51"/>
         <source>x</source>
-        <translation></translation>
+        <translation>x</translation>
     </message>
 </context>
 </TS>

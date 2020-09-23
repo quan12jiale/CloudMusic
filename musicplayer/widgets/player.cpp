@@ -66,30 +66,30 @@ void PlayWidgets::setButtons()
     this->single->setObjectName("single");
     connect(single, SIGNAL(clicked()), SLOT(singleEvent()));
     this->single->hide();
-    this->single->setToolTip("单曲循环");
+    this->single->setToolTip(tr("单曲循环"));
     // 单曲循环、随机播放、顺序播放、列表循环
 
     this->repeat = new QPushButton(this);
     this->repeat->setObjectName("repeat");
     connect(repeat, SIGNAL(clicked()), SLOT(repeatEvent()));
-    this->repeat->setToolTip("列表循环");
+    this->repeat->setToolTip(tr("列表循环"));
 
     this->shuffle = new QPushButton(this);
     this->shuffle->setObjectName("shuffle");
     connect(shuffle, SIGNAL(clicked()), SLOT(shuffleEvent()));
     this->shuffle->hide();
-    this->shuffle->setToolTip("随机循环");
+    this->shuffle->setToolTip(tr("随机循环"));
 
     this->lyricButton = new QPushButton(this);
     this->lyricButton->setObjectName("lyricButton");
     connect(lyricButton, SIGNAL(clicked()), SLOT(lyricEvent()));
-    this->lyricButton->setToolTip("打开歌词");
-    this->lyricButton->setText("词");
+    this->lyricButton->setToolTip(tr("打开歌词"));
+    this->lyricButton->setText(tr("词"));
 
     this->playlist = new QPushButton(this);
     this->playlist->setObjectName("playlist");
     connect(playlist, SIGNAL(clicked()), SLOT(playlistEvent()));
-    this->playlist->setToolTip("打开播放列表");
+    this->playlist->setToolTip(tr("打开播放列表"));
 }
 
 void PlayWidgets::setLabels()
@@ -184,7 +184,7 @@ void PlayWidgets::setPlayerAndPlayList(const QHash<QString, QString> &data, int 
 
     bool sureSetUp = this->player->setMusic(data["url"], data);
     if (!sureSetUp) {
-        this->currentMusic->setShortInfo("音乐不可播放", data["author"], data["music_img"]);
+        this->currentMusic->setShortInfo(tr("音乐不可播放"), data["author"], data["music_img"]);
         return;
     }
 
@@ -207,7 +207,7 @@ void PlayWidgets::setPlayerAndPlaylists(QList<QHash<QString, QString> > datas)
 
     bool sureSetUp = this->player->setMusic(dict["url"], dict);
     if (!sureSetUp) {
-        this->currentMusic->setShortInfo("音乐不可播放", dict["author"], dict["music_img"]);
+        this->currentMusic->setShortInfo(tr("音乐不可播放"), dict["author"], dict["music_img"]);
         this->nextSing();
         return;
     }
@@ -309,13 +309,13 @@ void PlayWidgets::lyricEvent()
                          "}}";
 
     if (this->desktopLyric->isVisible()) {
-        this->lyricButton->setToolTip("打开歌词");
+        this->lyricButton->setToolTip(tr("打开歌词"));
         //this->lyricButton->setStyleSheet(lyricStyle.arg("none").arg("#79797B"));
         this->desktopLyric->hide();
         return;
     }
 
-    this->lyricButton->setToolTip("关闭歌词");
+    this->lyricButton->setToolTip(tr("关闭歌词"));
     //this->lyricButton->setStyleSheet(lyricStyle.arg("#828282").arg("#FFFFFF"));
     this->desktopLyric->show();
     this->currentMusic->setDetailInfo();
@@ -682,7 +682,7 @@ QString CurrentMusic::getLyric()
 {
     QHash<QString,QString> musicInfo = this->parent->player->getCurrentMusicInfo();
     if (musicInfo.isEmpty())
-        return "✧请慢慢欣赏~";
+        return tr("✧请慢慢欣赏~");
 
     long long musicId = musicInfo["music_id"].toLongLong();
     if (this->currentMusicId == musicId)
@@ -697,7 +697,7 @@ QString CurrentMusic::getLyric()
 
     if (data.isEmpty()) {
         this->currentMusicId = musicId;
-        return "✧请慢慢欣赏~";
+        return tr("✧请慢慢欣赏~");
     }
 
     this->currentMusicId = musicId;
@@ -849,7 +849,7 @@ CurrentMusicDetail::CurrentMusicDetail(CurrentMusic* parent)
 
     this->allLyrics = QList<_LyricLabel*>();
 
-    this->titleLabel = new QLabel("✧✧✧");
+    this->titleLabel = new QLabel(tr("✧✧✧"));
     this->titleLabel->setObjectName("titleLabel");
 
     this->recoveryButton = new QPushButton();
@@ -1143,10 +1143,10 @@ _TableWidget::_TableWidget(PlayList *parent)
 
 void _TableWidget::setActions()
 {
-    this->actionClear = new QAction("清空", this);
+    this->actionClear = new QAction(tr("清空"), this);
     connect(actionClear, SIGNAL(triggered()), SLOT(clears()));
 
-    this->actionRemove = new QAction("从列表中删除", this);
+    this->actionRemove = new QAction(tr("从列表中删除"), this);
     connect(actionRemove, SIGNAL(triggered()), SLOT(remove()));
 }
 

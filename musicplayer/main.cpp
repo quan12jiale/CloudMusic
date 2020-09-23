@@ -21,8 +21,9 @@ void initialize()
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QString applicationDirPath = QCoreApplication::applicationDirPath();
     QTranslator translator;
-    bool res = translator.load(":/ZH_CN.qm");
+    bool res = translator.load(applicationDirPath + "/translations/musicplayer_zh_CN.qm");
     a.installTranslator(&translator);
 
     initialize();

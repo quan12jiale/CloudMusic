@@ -76,7 +76,7 @@ void ConfigDownloadFrame::downloadSong(QHash<QString, QString> musicInfo)
     musicName = replace_forbidden_sym(musicName);
 
     // 从托盘栏给出提示。
-    this->downloadFrame->parent->systemTray->showMessage("~~~", musicName+" 加入下载队列");
+    this->downloadFrame->parent->systemTray->showMessage("~~~", musicName+ tr(" 加入下载队列"));
     QByteArray data = myRequests->httpRequest(url);
 
     QString localPath = this->myDownloadFolder + '/' + musicName;
@@ -86,9 +86,9 @@ void ConfigDownloadFrame::downloadSong(QHash<QString, QString> musicInfo)
         qint64 bytes = file.write(data);
         // 从托盘栏给出提示。
         if (bytes == -1)
-            this->downloadFrame->parent->systemTray->showMessage("~~~", info.absoluteFilePath()+" 保存失败");
+            this->downloadFrame->parent->systemTray->showMessage("~~~", info.absoluteFilePath()+ tr(" 保存失败"));
         else
-            this->downloadFrame->parent->systemTray->showMessage("~~~", info.absoluteFilePath()+" 下载完成");
+            this->downloadFrame->parent->systemTray->showMessage("~~~", info.absoluteFilePath()+ tr(" 下载完成"));
     }
 
     musicInfo["url"] = localPath;
